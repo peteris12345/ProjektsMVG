@@ -1,0 +1,100 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title Input */
+.upload-title {
+    background-color: #d3d3d3;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    width: fit-content;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Upload Box */
+.upload-box {
+    background-color: #d3d3d3;
+    width: 50%;
+    max-width: 500px;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Upload Icon */
+.upload-box svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Category Dropdown */
+.category-dropdown {
+    background-color: #d3d3d3;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 50%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Continue Button with Fade in Effect */
+.continue-button {
+    background-color: #21b321;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.continue-button:hover {
+    opacity: 1;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    background-color: #5b6b82;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #4a5a6e;
+    opacity: 1;
+}

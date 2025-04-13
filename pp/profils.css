@@ -1,0 +1,173 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Pieslēgšanās un saites krāsas */
+a {
+    text-decoration: none;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #c9302c;
+}
+
+/* FLEXBOX konteineris mantām - vienmērīga centrēšana */
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrē mantas */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 90%;
+}
+
+/* Kartīšu dizains */
+.item-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+}
+
+/* Attēli būs vienāda izmēra */
+.item-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Labot un dzēst pogas */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Labot poga - zaļa */
+.edit-btn {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #4cae4c;
+}
+
+/* Dzēst poga - sarkana */
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Ievades lauki un select dropdown */
+input[type="text"], select {
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Faila izvēles poga */
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+/* Formas konteineris (Labot režīmam) */
+.edit-form {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 270px;
+}
+
+/* Saglabāt un Atcelt pogu stils */
+.save-btn {
+    background-color: #0275d8;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #025aa5;
+}
+
+.cancel-btn {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #ec971f;
+}
+
+/* Uz sākumlapu poga */
+.back-button {
+    display: block;
+    background-color: #5b6b82;
+    color: white;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #4a5a6e;
+    color: white !important;
+    opacity: 1;
+}
+
+/* ✅ RESPONSIVE DIZAINS */
+@media (max-width: 768px) {
+    .item-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

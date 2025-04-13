@@ -1,0 +1,235 @@
+/* Vispārējie stili */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Galvenais konteiners */
+.container {
+    width: 95%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    position: relative;
+}
+
+/* Virsraksti */
+h2 {
+    color: #5b6b82;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #444;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Tabulu stils */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    table-layout: fixed;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Sticky galvene */
+th {
+    background: #5b6b82;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Kolonnu platumi */
+th, td {
+    border: 1px solid #c4c4c4;
+    padding: 15px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 10%; } /* ID */
+th:nth-child(2), td:nth-child(2) { width: 30%; } /* Nosaukums / E-pasts */
+th:nth-child(3), td:nth-child(3) { width: 20%; } /* Kategorija / Loma */
+th:nth-child(4), td:nth-child(4) { width: 20%; } /* Attēls / Statuss */
+th:nth-child(5), td:nth-child(5) { width: 20%; } /* Darbības */
+
+/* Tabulas rindu augstums */
+tr {
+    height: 80px;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+/* Attēlu stils tabulā */
+img {
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Pogu stili */
+a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+    margin: 30px auto;
+}
+
+a:hover {
+    opacity: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Krāsas pogām */
+a[href*="delete_item"],
+a[href*="delete_user"] {
+    background: #E74C3C;
+    color: white;
+}
+
+a[href*="block_user"] {
+    background: #F39C12;
+    color: white;
+}
+
+a[href*="main.php"],
+a[href*="history.php"],
+a[href*="logout.php"] {
+    background: #5b6b82;
+    color: white;
+}
+
+/* !!! JAUNS STILS POGĀM - UZLIECAM TĀS AUGŠĀ !!! */
+.button-container {
+    position: absolute;
+    top: -70px; /* Pacel pogas augstāk */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+/* !!! FIKSĒTĀS POGAS PIE LAPAS GALVENES !!! */
+.fixed-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+}
+
+.fixed-buttons a {
+    background: #5b6b82;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.fixed-buttons a:hover {
+    opacity: 0.8;
+}
+
+/* Paginācija */
+.pagination {
+    margin: 20px 0;
+}
+
+.page-link {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background: #c4c4c4;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+    background: #5b6b82;
+    color: white;
+}
+
+/* Responsīvs dizains */
+@media (max-width: 768px) {
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    a {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .page-link {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    a {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .page-link {
+        padding: 6px 8px;
+    }
+
+    .fixed-buttons {
+        flex-direction: column;
+        right: 5px;
+        top: 5px;
+    }
+
+    .fixed-buttons a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

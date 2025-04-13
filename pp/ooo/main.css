@@ -1,0 +1,8 @@
+#brandinsert{
+    background-color: beige;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
